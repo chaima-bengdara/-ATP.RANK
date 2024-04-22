@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+       <title>My Tennis Predictions App</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-image: url('https://wallpapercave.com/wp/wp2361843.jpg');
+            color: #ffffff;
+
+        }
+        
+        h1 {
+            text-align: center;
+        }
+        
+        form {
+            width: 50%;
+            margin: 0 auto;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+        
+           input[type="submit"] {
+            margin-top: 20px;
+        }
+        input[type="text"] {
+            padding: 5px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            width: 100%;
+            box-sizing: border-box;
+        }
+        
+   input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 15px 30px; /* increase the padding values */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+    </style>
+</head>
+<body >
+    <h1>Tennis Match Prediction</h1>
+    <form action="/predict" method="POST">
+
+
+<div style="margin-bottom: 20px;" >
+  <label for="model">Choose a Model:</label>
+<div >
+  <input type="checkbox" name="model" value="svm">SVM<br>
+  <input type="checkbox" name="model" value="dt">Decision Tree<br>
+  <input type="checkbox" name="model" value="rf">Random Forest<br>
+  <input type="checkbox" name="model" value="gb">Gradient Boosting<br>
+</div>
+</div>
+
+<label for="tourney_id">Tournament ID:</label>
+<input type="text" name="tourney_id" id="tourney_id"><br>
+
+<label for="tourney_year">Tournament Year:</label>
+<input type="text" name="tourney_year" id="tourney_year"><br>
+
+<label for="tourney_month">Tournament Month:</label>
+<input type="text" name="tourney_month" id="tourney_month"><br>
+
+<label for="surface">Surface:</label>
+<input type="text" name="surface" id="surface"><br>
+
+<label for="draw_size">Draw Size:</label>
+<input type="text" name="draw_size" id="draw_size"><br>
+
+<label for="match_num">Match Number:</label>
+<input type="text" name="match_num" id="match_num"><br>
+
+<label for="first_id">First Player ID:</label>
+<input type="text" name="first_id" id="first_id"><br>
+
+<label for="first_hand">First Player Hand:</label>
+<input type="text" name="first_hand" id="first_hand"><br>
+
+<label for="first_ht">First Player Height:</label>
+<input type="text" name="first_ht" id="first_ht"><br>
+
+<label for="first_ioc">First Player Country:</label>
+<input type="text" name="first_ioc" id="first_ioc"><br>
+
+<label for="first_age">First Player Age:</label>
+<input type="text" name="first_age" id="first_age"><br>
+
+<label for="first_1stWon">First Player 1st Serve Won:</label>
+<input type="text" name="first_1stWon" id="first_1stWon"><br>
+
+<label for="first_2ndWon">First Player 2nd Serve Won:</label>
+<input type="text" name="first_2ndWon" id="first_2ndWon"><br>
+
+<label for="first_ace">First Player Aces:</label>
+<input type="text" name="first_ace" id="first_ace"><br>
+
+<label for="first_bpFaced">First Player Break Points Faced:</label>
+<input type="text" name="first_bpFaced" id="first_bpFaced"><br>
+
+<label for="second_id">Second Player ID:</label>
+<input type="text" name="second_id" id="second_id"><br>
+
+<label for="second_hand">Second Player Hand:</label>
+<input type="text" name="second_hand" id="second_hand"><br>
+
+<label for="second_ht">Second Player Height:</label>
+<input type="text" name="second_ht" id="second_ht"><br>
+
+<label for="second_ioc">Second Player Country:</label>
+<input type="text" name="second_ioc" id="second_ioc"><br>
+
+<label for="second_age">Second Player Age:</label>
+<input type="text" name="second_age" id="second_age"><br>
+
+<label for="second_1stWon">Second Player 1st Serve Won:</label>
+<input type="text" name="second_1stWon" id="second_1stWon"><br>
+
+<label for="second_2ndWon">Second Player 2nd Serve Won:</label>
+<input type="text" name="second_2ndWon" id="second_2ndWon"><br>
+
+<label for="second_ace">Second Player Aces:</label> 
+<input type="text" name="second_ace" ><br>
+<label for="second_bpFaced">Second Player Break Points Faced:</label> 
+<input type="text" name="second_bpFaced" ><br>
+<label for="first_rank">First Player Ranking:</label> 
+<input type="text" name="first_rank" ><br>
+<label for="second_rank">Second Player Ranking:</label>
+ <input type="text" name="second_rank" ><br>
+
+
+        <input type="submit" value="Predict">
+      </form>
+   </body>
+</html>
